@@ -1,0 +1,144 @@
+
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Permite utilizar acentos -->
+    <meta charset="UTF-8">
+
+    <!-- Adapta o site para celulares -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome da aba do navegador -->
+    <title>Meu Portfólio</title>
+
+    <!-- Importa nosso arquivo CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+<!-- Cabeçalho do site -->
+<header>
+    <h2>Meu Portfólio</h2>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<!-- Apresentação principal -->
+
+<section id="inicio" class="inicio">
+    <!-- Recebe o nome enviado pelo Java -->
+    <h1 th:text="'Olá, eu sou ' + ${nome} + '!'">
+        Olá, eu sou um Desenvolvedor!
+    </h1>
+    <!-- Recebe a profissão -->
+    <h2 th:text="${profissao}">
+        Desenvolvedor
+    </h2>
+    <!-- Recebe a descrição -->
+    <p th:text="${descricao}">
+        Minha apresentação
+    </p>
+    <a href="#projetos" class="botao">
+        Conhecer Projetos
+    </a>
+</section>
+
+
+<!-- Sobre mim -->
+<section id="sobre">
+
+    <h2>Sobre Mim</h2>
+
+    <p>
+        Sou estudante de programação e gosto
+        de tecnologia, jogos e desenvolvimento Web.
+    </p>
+
+</section>
+
+<!-- Habilidades -->
+<section id="habilidades">
+
+    <h2>Minhas Habilidades</h2>
+
+    <div class="habilidades">
+
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>GitHub</span>
+
+    </div>
+
+</section>
+
+<!-- Projetos -->
+<section id="projetos">
+
+    <h2>Meus Projetos</h2>
+
+    <div class="projetos">
+
+        <article class="card">
+            <h3>Portfólio Pessoal</h3>
+
+            <p>
+                Meu primeiro site desenvolvido
+                com Java e Spring Boot.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Sistema de Notas</h3>
+
+            <p>
+                Um projeto para cadastrar alunos
+                e calcular médias escolares.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Lista de Tarefas</h3>
+
+            <p>
+                Um sistema para organizar
+                atividades do dia a dia.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- Contato -->
+<section id="contato">
+
+    <h2>Entre em Contato</h2>
+
+    <p>Conheça meus projetos no GitHub!</p>
+
+    <a href="https://github.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="botao">
+        Meu GitHub
+    </a>
+
+</section>
+
+<!-- Rodapé -->
+<footer>
+    <p>2026 - Meu Portfólio Pessoal</p>
+</footer>
+
+</body>
+</html>

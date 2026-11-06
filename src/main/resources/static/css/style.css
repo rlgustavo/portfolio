@@ -1,0 +1,160 @@
+
+/* Remove os espaçamentos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do site */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #020617;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header h2 {
+    color: #38bdf8;
+}
+
+/* Menu */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Todas as seções */
+section {
+    padding: 70px 8%;
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* Apresentação principal */
+.inicio {
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    gap: 20px;
+}
+
+.inicio h1 {
+    font-size: 42px;
+}
+
+/* Botões */
+.botao {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #020617;
+
+    padding: 12px 25px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #0ea5e9;
+}
+
+/* Habilidades */
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.habilidades span {
+    background-color: #1e293b;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+/* Área dos projetos */
+.projetos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+/* Cartões de projetos */
+.card {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+
+    border: 1px solid #334155;
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    border-color: #38bdf8;
+}
+
+/* Rodapé */
+footer {
+    background-color: #020617;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .inicio h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+}
